@@ -1,6 +1,6 @@
 FROM alpine
 
-RUN apk add --update git && \
+RUN apk add --update git openssh-client && \
     apk info --purge
 
 RUN addgroup developer && adduser developer -G developer -h /home/developer -D

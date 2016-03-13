@@ -8,4 +8,4 @@ while [ ! -e "$git_root/.git" ]; do
         fi
 done
 
-docker run -it --rm --net=host -v "$HOME"/.gitconfig:/home/developer/.gitconfig -v "$git_root"/:/home/developer/workspace/ rodrigomiguele/git "$@"
+docker run -it --rm --net=host -v "$HOME"/.gitconfig:/home/developer/.gitconfig -v "$git_root"/:/home/developer/workspace/ -v "$HOME"/.ssh/:/home/developer/.ssh/ rodrigomiguele/git "$@"
